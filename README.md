@@ -4,6 +4,7 @@ Este repositorio define los mensajes utilizados por el protocolo ROS, en formato
 
 El cliente codifica y comprime los mensajes, para luego enviarlos a un backend propio que se encarga de realizar el request correspondiente en internet.
 Ver un ejemplo de implementación de SDK para Flutter en [ros-flutter](https://github.com/RequestOverSMS/ros-flutter)
+
 ## Request
 
 ```protobuf
@@ -31,3 +32,6 @@ message ROSResponse {
 }
 ```
 
+# Integraciones
+
+Para cada API que se desee integrar es necesario definir el esquema de protobuf correspondiente para luego compilar los mensajes y usarlos tanto en el SDK como en el Gateway.
