@@ -1,0 +1,135 @@
+syntax = "proto3";
+
+message v1_payments_response {
+
+    message Identification {
+        uint64 number = 1;
+        string type = 2;
+    }
+
+    message Payer {
+        uint32 id = 1;
+        string email = 2;
+        Identification identification = 3;
+        string type = 4;
+    }
+
+    message Metadata {
+    }
+
+    message Items {
+        string id = 1;
+        string title = 2;
+        string description = 3;
+        string picture_url = 4;
+        string category_id = 5;
+        uint32 quantity = 6;
+        double unit_price = 7;
+    }
+
+    message Payer1 {
+        string registration_date = 1;
+    }
+
+    message Receiver_address {
+        string street_name = 1;
+        uint32 street_number = 2;
+        uint32 zip_code = 3;
+        string city_name = 4;
+        string state_name = 5;
+    }
+
+    message Shipments {
+        Receiver_address receiver_address = 1;
+    }
+
+    message Additional_info {
+        repeated Items items = 1;
+        Payer1 payer = 2;
+        Shipments shipments = 3;
+    }
+
+    message Order {
+    }
+
+    message Transaction_details {
+        double net_received_amount = 1;
+        double total_paid_amount = 2;
+        uint32 overpaid_amount = 3;
+        double installment_amount = 4;
+    }
+
+    message Fee_details {
+        string type = 1;
+        double amount = 2;
+        string fee_payer = 3;
+    }
+
+    message Identification1 {
+        uint64 number = 1;
+        string type = 2;
+    }
+
+    message Cardholder {
+        string name = 1;
+        Identification1 identification = 2;
+    }
+
+    message Card {
+        uint32 first_six_digits = 1;
+        uint32 last_four_digits = 2;
+        uint32 expiration_month = 3;
+        uint32 expiration_year = 4;
+        string date_created = 5;
+        string date_last_updated = 6;
+        Cardholder cardholder = 7;
+    }
+
+    message Application_data {
+        string name = 1;
+        string version = 2;
+    }
+
+    message Transaction_data {
+        string qr_code_base64 = 1;
+        string qr_code = 2;
+    }
+
+    message Point_of_interaction {
+        string type = 1;
+        Application_data application_data = 2;
+        Transaction_data transaction_data = 3;
+    }
+
+    uint32 id = 1;
+    string date_created = 2;
+    string date_approved = 3;
+    string date_last_updated = 4;
+    string money_release_date = 5;
+    uint32 issuer_id = 6;
+    string payment_method_id = 7;
+    string payment_type_id = 8;
+    string status = 9;
+    string status_detail = 10;
+    string currency_id = 11;
+    string description = 12;
+    uint32 taxes_amount = 13;
+    uint32 shipping_amount = 14;
+    uint32 collector_id = 15;
+    Payer payer = 16;
+    Metadata metadata = 17;
+    Additional_info additional_info = 18;
+    Order order = 19;
+    string external_reference = 20;
+    double transaction_amount = 21;
+    uint32 transaction_amount_refunded = 22;
+    uint32 coupon_amount = 23;
+    Transaction_details transaction_details = 24;
+    repeated Fee_details fee_details = 25;
+    string statement_descriptor = 26;
+    uint32 installments = 27;
+    Card card = 28;
+    string notification_url = 29;
+    string processing_mode = 30;
+    Point_of_interaction point_of_interaction = 31;
+}

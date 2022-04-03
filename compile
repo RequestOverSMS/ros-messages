@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+ROOT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+BUILD_DIR=build
+BUILD_PATH=$ROOT_DIR/$BUILD_DIR
+ABSOLUTE=1
+
+if [ $# -eq 1 ]; then
+  BUILD_PATH=$1
+  ABSOLUTE=0
+fi
+
+mkdir -p $BUILD_PATH
+
+
+function buildInPath {
+  for PROTO_FILE in "$1/*.proto"
+  do
+    echo "Processing $PROTO_FILE file..."
+    #mkdir -p $BUILD_PATH/$1
+    #protoc -I=$1 --python_out=$BUILD_PATH/$1 $PROTO_FILE
+    protoc -I=$1 --python_out=$BUILD_PATH $PROTO_FILE
+
+  done
+}
+
+
+# Compile common ROS messages
+buildInPath $ROOT_DIR/common
+
+# Compile all integrations
+for SUBDIR_PATH in $ROOT_DIR/integrations/*/
+do
+    SUBDIR_NAME=${SUBDIR_PATH%*/}      # remove the trailing "/"
+    SUBDIR_NAME="${SUBDIR_NAME##*/}"    # print everything after the final "/"
+
+    if [ $SUBDIR_NAME != $BUILD_DIR ]; then
+      buildInPath $SUBDIR_PATH 
+    fi
+done
+
+
+
+
+

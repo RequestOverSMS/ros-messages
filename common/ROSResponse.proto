@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+import "ROSEnums.proto";
+
+message ROSResponse {
+
+  optional Type    type    = 1 [default = RESPONSE];
+  optional Method  method  = 2;
+  optional uint32  code    = 3;
+  // 4 reserved in ROSRequest
+  optional bytes   headers = 5;
+  optional bytes   body    = 6;
+}
+

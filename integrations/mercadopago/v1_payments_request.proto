@@ -1,0 +1,78 @@
+  
+syntax = "proto3";
+
+message v1_payments_request {
+
+    message Items {
+        string id = 1;
+        string title = 2;
+        string description = 3;
+        string picture_url = 4;
+        string category_id = 5;
+        uint32 quantity = 6;
+        double unit_price = 7;
+    }
+
+    message Phone {
+        uint32 area_code = 1;
+        string number = 2;
+    }
+
+    message Address {
+    }
+
+    message Payer {
+        string first_name = 1;
+        string last_name = 2;
+        Phone phone = 3;
+        Address address = 4;
+    }
+
+    message Receiver_address {
+        string zip_code = 1;
+        string state_name = 2;
+        string city_name = 3;
+        string street_name = 4;
+        uint32 street_number = 5;
+    }
+
+    message Shipments {
+        Receiver_address receiver_address = 1;
+    }
+
+    message Barcode {
+    }
+
+    message Additional_info {
+        repeated Items items = 1;
+        Payer payer = 2;
+        Shipments shipments = 3;
+        Barcode barcode = 4;
+    }
+
+    message Metadata {
+    }
+
+    message Order {
+        string type = 1;
+    }
+
+    message Identification {
+    }
+
+    message Payer1 {
+        string entity_type = 1;
+        string type = 2;
+        Identification identification = 3;
+    }
+
+    Additional_info additional_info = 1;
+    string description = 2;
+    string external_reference = 3;
+    uint32 installments = 4;
+    Metadata metadata = 5;
+    Order order = 6;
+    Payer1 payer = 7;
+    string payment_method_id = 8;
+    double transaction_amount = 9;
+}

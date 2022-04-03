@@ -1,0 +1,40 @@
+syntax = "proto2";
+
+message Headers {
+  optional string A_IM                             = 1;   
+  optional string Accept                           = 2;     
+  optional string Accept_Charset                   = 3;             
+  optional string Accept_Encoding                  = 4;              
+  optional string Accept_Language                  = 5;              
+  optional string Accept_Datetime                  = 6;              
+  optional string Access_Control_Request_Method    = 7;                            
+  optional string Access_Control_Request_Headers   = 8;                             
+  optional string Authorization                    = 9;            
+  optional string Cache_Control                    = 10;            
+  optional string Connection                       = 11;         
+  optional uint32 Content_Length                   = 12;             
+  optional string Content_Type                     = 13;           
+  optional string Cookie                           = 14;     
+  optional string Date                             = 15;   
+  optional string Expect                           = 16;     
+  optional string Forwarded                        = 17;        
+  optional string From                             = 18;   
+  optional string Host                             = 19;   
+  optional string If_Match                         = 20;       
+  optional string If_Modified_Since                = 21;                
+  optional string If_None_Match                    = 22;            
+  optional string If_Range                         = 23;       
+  optional string If_Unmodified_Since              = 24;                  
+  optional uint32 Max_Forwards                     = 25;           
+  optional string Origin                           = 26;     
+  optional string Pragma                           = 27;     
+  optional string Proxy_Authorization              = 28;                  
+  optional string Range                            = 29;    
+  optional string Referer                          = 30;      
+  optional string TE                               = 31; 
+  optional string User_Agent                       = 32;         
+  optional string Upgrade                          = 33;      
+  optional string Via                              = 34;  
+  optional string Warning                          = 35;      
+}
+

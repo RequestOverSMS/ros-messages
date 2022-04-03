@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+
+enum Type {
+  REQUEST    = 0;
+  RESPONSE   = 1;
+}
+
+enum Method {
+  OPTIONS    = 0;
+  GET        = 1;
+  HEAD       = 2;
+  POST       = 3;
+  PUT        = 4;
+  DELETE     = 5;
+  TRACE      = 6;
+  CONNECT    = 7;
+}
+
