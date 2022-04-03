@@ -1,0 +1,442 @@
+
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+message v1_market {
+
+    message Daiars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Btcars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Btcdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Btcust {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Daiusd {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ethars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ethdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ethust {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Adaars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Adadai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Bnbdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Bnbars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Maticars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Maticdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Dotars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Dotdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Solars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Soldai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdtars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdtdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdtnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdcars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdcdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Usdcnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Busdars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Busddai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Busdnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ustars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ustdai {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ustnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Nuarsars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        string open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Adanuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Bnbnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Btcnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Dainuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Dotnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Ethnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Maticnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Solnuars {
+        string currency = 1;
+        string bid_currency = 2;
+        string ask_currency = 3;
+        string purchase_price = 4;
+        string selling_price = 5;
+        google.protobuf.Any open_price = 6;
+        string market_identifier = 7;
+    }
+
+    message Object {
+        Daiars daiars = 1;
+        Btcars btcars = 2;
+        Btcdai btcdai = 3;
+        Btcust btcust = 4;
+        Daiusd daiusd = 5;
+        Ethars ethars = 6;
+        Ethdai ethdai = 7;
+        Ethust ethust = 8;
+        Adaars adaars = 9;
+        Adadai adadai = 10;
+        Bnbdai bnbdai = 11;
+        Bnbars bnbars = 12;
+        Maticars maticars = 13;
+        Maticdai maticdai = 14;
+        Dotars dotars = 15;
+        Dotdai dotdai = 16;
+        Solars solars = 17;
+        Soldai soldai = 18;
+        Usdtars usdtars = 19;
+        Usdtdai usdtdai = 20;
+        Usdtnuars usdtnuars = 21;
+        Usdcars usdcars = 22;
+        Usdcdai usdcdai = 23;
+        Usdcnuars usdcnuars = 24;
+        Busdars busdars = 25;
+        Busddai busddai = 26;
+        Busdnuars busdnuars = 27;
+        Ustars ustars = 28;
+        Ustdai ustdai = 29;
+        Ustnuars ustnuars = 30;
+        Nuarsars nuarsars = 31;
+        Adanuars adanuars = 32;
+        Bnbnuars bnbnuars = 33;
+        Btcnuars btcnuars = 34;
+        Dainuars dainuars = 35;
+        Dotnuars dotnuars = 36;
+        Ethnuars ethnuars = 37;
+        Maticnuars maticnuars = 38;
+        Solnuars solnuars = 39;
+    }
+
+    Object object = 1;
+    repeated google.protobuf.Any errors = 2;
+}
