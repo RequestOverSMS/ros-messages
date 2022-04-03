@@ -2,16 +2,37 @@
 
 ROOT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-BUILD_DIR=build
+
+if [ $# -eq 0 ]; then
+  echo "Must determine output language: ´compile [python, dart]´"
+  exit -1
+fi
+
+if [ $# -eq 1 ]; then
+  OUTPUT=$1
+  if [ "$OUTPUT" == "python" ]; then
+    echo "Compiling for python"
+  elif [ "$OUTPUT" == "dart" ]; then
+    echo "Compiling for dart"
+  else
+    echo "Unknown output! ($OUTPUT)"
+    exit -1
+  fi
+  
+fi
+
+BUILD_DIR=build/$OUTPUT
 BUILD_PATH=$ROOT_DIR/$BUILD_DIR
 ABSOLUTE=1
 
-if [ $# -eq 1 ]; then
-  BUILD_PATH=$1
+
+if [ $# -eq 2 ]; then
+  BUILD_PATH=$2
   ABSOLUTE=0
 fi
 
-mkdir -p $BUILD_PATH
+mkdir -p $ROOT_DIR/build
+mkdir -p $ROOT_DIR/$BUILD_DIR/$OUTPUT
 
 
 function buildInPath {
@@ -20,7 +41,13 @@ function buildInPath {
     echo "Processing $PROTO_FILE file..."
     #mkdir -p $BUILD_PATH/$1
     #protoc -I=$1 --python_out=$BUILD_PATH/$1 $PROTO_FILE
-    protoc -I=$1 --python_out=$BUILD_PATH $PROTO_FILE
+
+    if [ "$OUTPUT" == "python" ]; then
+      protoc -I=$1 --python_out=$BUILD_PATH $PROTO_FILE
+    elif [ "$OUTPUT" == "dart" ]; then
+      protoc -I=$1 --dart_out=$BUILD_PATH $PROTO_FILE
+    fi
+    
 
   done
 }
